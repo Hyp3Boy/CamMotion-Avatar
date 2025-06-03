@@ -1,0 +1,15 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1748907282
+icon.svg::CompressedTexture2D/CompressedTexture2D::2573899848648514665::1748897518::1748897522::1::::<><><>0<>0<>a4013463e630cfca4c04f13a2588a272<>res://.godot/imported/icon.svg-218a8f2b3041327d8a5756f3a245f83b.ctex::
+::res://addons/::1748907269
+::res://addons/GDMP/::1748901060
+GDMP.gdextension::GDExtension/GDExtension::6184159208670839642::1739439754::0::1::::<><><>0<>0<><>::
+MediaPipeExternalFiles.gd::GDScript/GDScript::3412021340144465872::1739439754::0::1::::<>Node<><>0<>0<><>::
+plugin.cfg::TextFile/TextFile::-1::1739439754::0::1::::<><><>0<>0<><>::
+plugin.gd::GDScript/GDScript::3427417856238506269::1739439754::0::1::::<>EditorPlugin<><>0<>1<><>::
+::res://addons/GDMP/editor/::1748901060
+android_export_plugin.gd::GDScript/GDScript::3127098711953832210::1739439754::0::1::::<>EditorExportPlugin<><>0<>0<><>::
+::res://addons/GDMP/libs/::1748903108
+::res://addons/GDMP/libs/arm64/::1748904117
+::res://addons/GDMP/libs/GDMP.ios.framework/::1739439756
+::res://addons/GDMP/libs/x86_64/::1739439757
