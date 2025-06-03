@@ -1,0 +1,137 @@
+[gd_scene load_steps=9 format=3 uid="uid://drm7x205v05wh"]
+
+[ext_resource type="Texture2D" uid="uid://4lhr0ecmdg08" path="res://Assets/background.jpg" id="1_2ppmm"]
+[ext_resource type="Script" uid="uid://dnid15eukdb7w" path="res://main_ui.gd" id="1_ktt6o"]
+[ext_resource type="FontFile" uid="uid://m38h3e6uiuhl" path="res://Assets/main_font.ttf" id="2_w37m7"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w37m7"]
+texture = ExtResource("1_2ppmm")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w37m7"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ktt6o"]
+bg_color = Color(0.403922, 0.490196, 0.717647, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.231373)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_4uoxc"]
+bg_color = Color(0.270588, 0.294118, 0.4, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.231373)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_td82l"]
+bg_color = Color(0.270588, 0.294118, 0.4, 1)
+corner_radius_top_left = 16
+corner_radius_top_right = 16
+corner_radius_bottom_right = 16
+corner_radius_bottom_left = 16
+shadow_color = Color(0, 0, 0, 0.231373)
+shadow_size = 5
+shadow_offset = Vector2(0, 3.41)
+
+[node name="MainUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ktt6o")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w37m7")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 500
+theme_override_constants/margin_top = 500
+theme_override_constants/margin_right = 500
+theme_override_constants/margin_bottom = 500
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 250
+
+[node name="Label" type="Label" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_stretch_ratio = 2.0
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_offset_y = 11
+theme_override_fonts/font = ExtResource("2_w37m7")
+theme_override_font_sizes/font_size = 82
+text = "CAM MOTION AVATAR"
+horizontal_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/VBoxContainer2"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/separation = 20
+alignment = 1
+
+[node name="PlayButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.960784, 0.945098, 0.929412, 1)
+theme_override_fonts/font = ExtResource("2_w37m7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w37m7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ktt6o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4uoxc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_td82l")
+text = "PLAY"
+
+[node name="WorldButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.960784, 0.945098, 0.929412, 1)
+theme_override_fonts/font = ExtResource("2_w37m7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w37m7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ktt6o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4uoxc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_td82l")
+text = "CHANGE 3D WORLD"
+
+[node name="AvatarButton" type="Button" parent="MarginContainer/VBoxContainer2/VBoxContainer"]
+custom_minimum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0.960784, 0.945098, 0.929412, 1)
+theme_override_fonts/font = ExtResource("2_w37m7")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_w37m7")
+theme_override_styles/hover = SubResource("StyleBoxFlat_ktt6o")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_4uoxc")
+theme_override_styles/normal = SubResource("StyleBoxFlat_td82l")
+text = "CHANGE AVATAR"
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/WorldButton" to="." method="_on_world_button_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer2/VBoxContainer/AvatarButton" to="." method="_on_avatar_button_pressed"]
